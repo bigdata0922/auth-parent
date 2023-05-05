@@ -1,0 +1,28 @@
+GET http://localhost:8800/admin/system/sysRole/remove/?id=11
+Accept: application/json
+
+<> 2023-05-04T001158.404.json
+
+###
+
+GET http://localhost:8800/admin/system/sysRole/remove/?id=11
+Accept: application/json
+
+<> 2023-05-04T000453.404.json
+
+###
+
+GET http://localhost:8800/admin/system/sysRole/remove/?id=11
+Accept: application/json
+
+<> 2023-05-04T000445.404.json
+
+###
+
+GET http://localhost:8800/admin/system/sysRole/remove?id=11
+Accept: application/json
+
+<> 2023-05-04T000326.404.json
+
+###
+
