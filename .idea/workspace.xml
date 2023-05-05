@@ -7,7 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa6ff01c-9c79-44dd-a859-57f1ec350f3b" name="Default Changelist" comment="springboot+vue实现权限管理系统，后端代码" />
+    <list default="true" id="aa6ff01c-9c79-44dd-a859-57f1ec350f3b" name="Default Changelist" comment="springboot+vue实现权限管理系统，后端代码">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,8 +23,8 @@
       <list>
         <option value="AnnotationType" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -74,7 +76,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -83,9 +85,9 @@
       <recent name="D:\projectWarehouse01\auth-parent\model\src\main\java\com\qi\model" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ServiceAuthApplication">
-    <configuration name="CodeGet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.qi.system.CodeGet" />
+  <component name="RunManager" selected="Application.GitHubCommintTest">
+    <configuration name="GitHubCommintTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.qi.system.GitHubCommintTest" />
       <module name="service-system" />
       <extension name="coverage">
         <pattern>
@@ -110,21 +112,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="rest-api_1#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="SysRoleServiceTest.testQueryWrapper" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="printTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.qi.system.printTest" />
       <module name="service-system" />
       <extension name="coverage">
         <pattern>
@@ -132,13 +121,25 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.qi.system" />
-      <option name="MAIN_CLASS_NAME" value="com.qi.system.SysRoleServiceTest" />
-      <option name="METHOD_NAME" value="testQueryWrapper" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="rest-api_1#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http" runType="Run single request">
+      <method v="2" />
     </configuration>
     <configuration name="ServiceAuthApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="service-system" />
@@ -155,11 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GitHubCommintTest" />
+        <item itemvalue="Application.printTest" />
         <item itemvalue="Spring Boot.ServiceAuthApplication" />
-        <item itemvalue="Application.JwtHelper" />
-        <item itemvalue="Application.CodeGet" />
         <item itemvalue="HTTP Request.rest-api_1#1" />
-        <item itemvalue="JUnit.SysRoleServiceTest.testQueryWrapper" />
+        <item itemvalue="Application.JwtHelper" />
       </list>
     </recent_temporary>
   </component>
@@ -178,7 +179,7 @@
       <workItem from="1683123602247" duration="50119000" />
       <workItem from="1683252437339" duration="13045000" />
       <workItem from="1683290653976" duration="350000" />
-      <workItem from="1683291052270" duration="1609000" />
+      <workItem from="1683291052270" duration="1821000" />
     </task>
     <servers />
   </component>
