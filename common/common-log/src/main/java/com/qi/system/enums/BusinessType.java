@@ -54,4 +54,8 @@ public enum BusinessType {
      * 清空数据
      */
     CLEAN,
+    /**
+     * 查询
+     */
+    SELECT,
 }

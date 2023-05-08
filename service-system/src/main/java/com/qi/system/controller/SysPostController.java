@@ -5,6 +5,8 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.qi.common.result.Result;
 import com.qi.model.system.SysPost;
 import com.qi.model.vo.SysPostQueryVo;
+import com.qi.system.annotation.Log;
+import com.qi.system.enums.BusinessType;
 import com.qi.system.service.SysPostService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -34,6 +36,7 @@ public class SysPostController {
      *
      * @return
      */
+    @Log(title = "岗位管理",businessType = BusinessType.SELECT)
     @ApiOperation(value = "获取全部角色列表")
     @GetMapping("/findAll")
     public Result findAll() {
@@ -49,6 +52,7 @@ public class SysPostController {
      * @param sysPostQueryVo
      * @return
      */
+    @Log(title = "岗位管理",businessType = BusinessType.SELECT)
     @ApiOperation(value = "获取分页列表")
     @GetMapping("{page}/{limit}")
     public Result index(
@@ -70,6 +74,7 @@ public class SysPostController {
      * @param sysPost
      * @return
      */
+    @Log(title = "岗位管理",businessType = BusinessType.INSERT)
     @ApiOperation("添加岗位")
     @PostMapping("save")
     public Result savePost(@RequestBody SysPost sysPost) {
@@ -86,6 +91,7 @@ public class SysPostController {
      * @param id
      * @return
      */
+    @Log(title = "岗位管理",businessType = BusinessType.SELECT)
     @ApiOperation(value = "获取岗位")
     @GetMapping("/get/{id}")
     public Result get(@PathVariable long id) {
@@ -100,6 +106,7 @@ public class SysPostController {
      * @param sysPost
      * @return
      */
+    @Log(title = "岗位管理",businessType = BusinessType.UPDATE)
     @ApiOperation(value = "修改岗位信息")
     @PutMapping("/update")
     public Result updateById(@RequestBody SysPost sysPost) {
@@ -115,6 +122,7 @@ public class SysPostController {
      * @param id
      * @return
      */
+    @Log(title = "岗位管理",businessType = BusinessType.DELETE)
     @ApiOperation(value = "根据id删除岗位信息")
     @DeleteMapping("/remove/{id}")
     public Result RemoveRole(@PathVariable Long id){
@@ -131,6 +139,7 @@ public class SysPostController {
      * @param idList
      * @return
      */
+    @Log(title = "岗位管理",businessType = BusinessType.DELETE)
     @ApiOperation(value = "根据id列表进行删除")
     @DeleteMapping("/batchRemove")
     public Result batchRemove(@RequestBody List<Long> idList){

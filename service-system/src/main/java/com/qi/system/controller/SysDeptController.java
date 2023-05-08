@@ -2,6 +2,8 @@ package com.qi.system.controller;
 
 import com.qi.common.result.Result;
 import com.qi.model.system.SysDept;
+import com.qi.system.annotation.Log;
+import com.qi.system.enums.BusinessType;
 import com.qi.system.service.SysDeptService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -30,6 +32,7 @@ public class SysDeptController {
      *
      * @return
      */
+    @Log(title = "部门管理",businessType = BusinessType.SELECT)
     @ApiOperation(value = "获取部门信息")
     @GetMapping("findNodes")
     public Result findNodes() {
@@ -43,6 +46,7 @@ public class SysDeptController {
      * @param id
      * @return
      */
+    @Log(title = "部门管理",businessType = BusinessType.SELECT)
     @ApiOperation(value = "根据id查询部门")
     @GetMapping("/get/{id}")
     public Result get(@PathVariable Long id) {
@@ -56,6 +60,7 @@ public class SysDeptController {
      * @param permission
      * @return
      */
+    @Log(title = "部门管理",businessType = BusinessType.INSERT)
     @ApiOperation(value = "新增部门")
     @PostMapping("save")
     public Result save(@RequestBody SysDept permission) {
@@ -72,6 +77,7 @@ public class SysDeptController {
      * @param permission
      * @return
      */
+    @Log(title = "部门管理",businessType = BusinessType.UPDATE)
     @ApiOperation(value = "修改部门")
     @PutMapping("update")
     public Result updateById(@RequestBody SysDept permission) {
@@ -92,6 +98,7 @@ public class SysDeptController {
      * @param id
      * @return
      */
+    @Log(title = "部门管理",businessType = BusinessType.DELETE)
     @ApiOperation(value = "删除部门")
     @DeleteMapping("remove/{id}")
     public Result remove(@PathVariable Long id) {

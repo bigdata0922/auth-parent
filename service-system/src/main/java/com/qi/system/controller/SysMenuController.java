@@ -3,6 +3,8 @@ package com.qi.system.controller;
 import com.qi.common.result.Result;
 import com.qi.model.system.SysMenu;
 import com.qi.model.vo.AssginMenuVo;
+import com.qi.system.annotation.Log;
+import com.qi.system.enums.BusinessType;
 import com.qi.system.service.SysMenuService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -26,6 +28,7 @@ public class SysMenuController {
      *
      * @return
      */
+    @Log(title = "菜单管理",businessType = BusinessType.SELECT)
     @ApiOperation(value = "获取菜单")
     @GetMapping("findNodes")
     public Result findNodes() {
@@ -38,6 +41,7 @@ public class SysMenuController {
      * @param id
      * @return
      */
+    @Log(title = "菜单管理",businessType = BusinessType.SELECT)
     @ApiOperation(value = "根据id查询菜单")
     @GetMapping("/get/{id}")
     public Result get(@PathVariable Long id){
@@ -51,6 +55,7 @@ public class SysMenuController {
      * @param permission
      * @return
      */
+    @Log(title = "菜单管理",businessType = BusinessType.INSERT)
     @ApiOperation(value = "新增菜单")
     @PostMapping("save")
     public Result save(@RequestBody SysMenu permission) {
@@ -64,6 +69,7 @@ public class SysMenuController {
      * @param permission
      * @return
      */
+    @Log(title = "菜单管理",businessType = BusinessType.UPDATE)
     @ApiOperation(value = "修改菜单")
     @PutMapping("update")
     public Result updateById(@RequestBody SysMenu permission) {
@@ -81,6 +87,7 @@ public class SysMenuController {
      * @param id
      * @return
      */
+    @Log(title = "菜单管理",businessType = BusinessType.DELETE)
     @ApiOperation(value = "删除菜单")
     @DeleteMapping("remove/{id}")
     public Result remove(@PathVariable Long id) {
@@ -100,6 +107,7 @@ public class SysMenuController {
      * @param roleId
      * @return
      */
+    @Log(title = "菜单管理",businessType = BusinessType.SELECT)
     @ApiOperation(value = "根据角色获取菜单")
     @GetMapping("/toAssign/{roleId}")
     public Result toAssign(@PathVariable Long roleId) {
@@ -107,6 +115,7 @@ public class SysMenuController {
         return Result.ok(list);
     }
 
+    @Log(title = "菜单管理",businessType = BusinessType.ASSGIN)
     @ApiOperation(value = "给角色分配权限")
     @PostMapping("/doAssign")
     public Result doAssign(@RequestBody AssginMenuVo assginMenuVo) {

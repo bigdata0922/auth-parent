@@ -7,6 +7,8 @@ import com.qi.common.result.Result;
 import com.qi.common.utils.MD5;
 import com.qi.model.system.SysUser;
 import com.qi.model.vo.SysUserQueryVo;
+import com.qi.system.annotation.Log;
+import com.qi.system.enums.BusinessType;
 import com.qi.system.service.SysUserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -38,6 +40,7 @@ public class SysUserController {
      * @param userQueryVo
      * @return
      */
+    @Log(title = "用户管理",businessType = BusinessType.SELECT)
     @ApiOperation(value = "获取分页列表")
     @GetMapping("/{page}/{limit}")
     public Result index(
@@ -60,6 +63,7 @@ public class SysUserController {
      * @param id
      * @return
      */
+    @Log(title = "用户管理",businessType = BusinessType.SELECT)
     @ApiOperation(value = "获取用户")
     @GetMapping("/get/{id}")
     public Result get(@PathVariable Long id) {
@@ -73,6 +77,7 @@ public class SysUserController {
      * @param user
      * @return
      */
+    @Log(title = "用户管理",businessType = BusinessType.INSERT)
     @ApiOperation(value = "保存用户")
     @PostMapping("/save")
     public Result save(@RequestBody SysUser user) {
@@ -95,6 +100,7 @@ public class SysUserController {
      * @param user
      * @return
      */
+    @Log(title = "用户管理",businessType = BusinessType.UPDATE)
     @ApiOperation(value = "更新用户")
     @PutMapping("/update")
     public Result updateById(@RequestBody SysUser user) {
@@ -107,6 +113,7 @@ public class SysUserController {
      * @param id
      * @return
      */
+    @Log(title = "用户管理",businessType = BusinessType.DELETE)
     @ApiOperation(value = "删除用户")
     @DeleteMapping("/remove/{id}")
     public Result remove(@PathVariable Long id) {

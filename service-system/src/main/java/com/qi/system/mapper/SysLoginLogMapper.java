@@ -15,5 +15,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 @Mapper
 public interface SysLoginLogMapper extends BaseMapper<SysLoginLog> {
-    IPage<SysLoginLog> selectPage(Page<SysLoginLog> page, @Param("vo") SysLoginLogQueryVo sysLoginLogQueryVo);
+    IPage<SysLoginLog> selectPage(@Param("pageParam") Page<SysLoginLog> page, @Param("vo") SysLoginLogQueryVo sysLoginLogQueryVo);
 }

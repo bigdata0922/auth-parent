@@ -5,6 +5,8 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.qi.common.result.Result;
 import com.qi.model.system.SysOperLog;
 import com.qi.model.vo.SysOperLogQueryVo;
+import com.qi.system.annotation.Log;
+import com.qi.system.enums.BusinessType;
 import com.qi.system.service.AsyncOperLogService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -26,6 +28,14 @@ public class SysOperLogController {
     @Resource
     private AsyncOperLogService sysOperLogService;
 
+    /**
+     * 条件分页查询
+     * @param page
+     * @param limit
+     * @param sysOperLogQueryVo
+     * @return
+     */
+    @Log(title = "操作日志管理",businessType = BusinessType.SELECT)
     @ApiOperation(value = "获取分页列表")
     @GetMapping("{page}/{limit}")
     public Result index(
@@ -42,6 +52,7 @@ public class SysOperLogController {
         return Result.ok(pageModel);
     }
 
+    @Log(title = "操作日志管理",businessType = BusinessType.SELECT)
     @ApiOperation(value = "获取")
     @GetMapping("get/{id}")
     public Result get(@PathVariable Long id) {

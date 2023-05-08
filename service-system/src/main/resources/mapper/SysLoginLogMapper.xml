@@ -25,13 +25,12 @@
             and is_deleted = 0
         </where>
     </sql>
-    <select id="selectPage1" resultMap="sysLoginLogMap">
+    <select id="selectPage" resultMap="sysLoginLogMap">
         select <include refid="columns" />
         from sys_login_log
         <include refid="findPageWhere"/>
         order by id desc
     </select>
-
 
 
 </mapper>

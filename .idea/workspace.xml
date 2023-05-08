@@ -7,15 +7,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa6ff01c-9c79-44dd-a859-57f1ec350f3b" name="Default Changelist" comment="实现岗位管理部分">
-      <change afterPath="$PROJECT_DIR$/service-system/src/main/java/com/qi/system/controller/SysDeptController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-system/src/main/java/com/qi/system/mapper/SysDeptMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-system/src/main/java/com/qi/system/service/SysDeptService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-system/src/main/java/com/qi/system/service/impl/SysDeptServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-system/src/main/java/com/qi/system/utils/DeptHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-system/src/main/resources/mapper/SysDeptMapper.xml" afterDir="false" />
+    <list default="true" id="aa6ff01c-9c79-44dd-a859-57f1ec350f3b" name="Default Changelist" comment="实现部门管理部分">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-system/src/main/java/com/qi/system/utils/MenuHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/java/com/qi/system/utils/MenuHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common-log/src/main/java/com/qi/system/enums/BusinessType.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-log/src/main/java/com/qi/system/enums/BusinessType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-system/src/main/java/com/qi/system/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/java/com/qi/system/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-system/src/main/java/com/qi/system/controller/SysDeptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/java/com/qi/system/controller/SysDeptController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-system/src/main/java/com/qi/system/controller/SysLoginLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/java/com/qi/system/controller/SysLoginLogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-system/src/main/java/com/qi/system/controller/SysMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/java/com/qi/system/controller/SysMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-system/src/main/java/com/qi/system/controller/SysOperLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/java/com/qi/system/controller/SysOperLogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-system/src/main/java/com/qi/system/controller/SysPostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/java/com/qi/system/controller/SysPostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-system/src/main/java/com/qi/system/controller/SysRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/java/com/qi/system/controller/SysRoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-system/src/main/java/com/qi/system/controller/SysUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/java/com/qi/system/controller/SysUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-system/src/main/java/com/qi/system/mapper/SysLoginLogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/java/com/qi/system/mapper/SysLoginLogMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-system/src/main/java/com/qi/system/service/SysLoginLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/java/com/qi/system/service/SysLoginLogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-system/src/main/resources/mapper/SysLoginLogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-system/src/main/resources/mapper/SysLoginLogMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +88,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -179,6 +184,7 @@
       <workItem from="1683354745018" duration="878000" />
       <workItem from="1683356673347" duration="6907000" />
       <workItem from="1683507300453" duration="16809000" />
+      <workItem from="1683536687417" duration="7011000" />
     </task>
     <task id="LOCAL-00001" summary="springboot+vue实现权限管理系统，后端代码">
       <created>1683292972075</created>
@@ -194,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683513423406</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="实现部门管理部分">
+      <created>1683536747092</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1683536747092</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +228,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="springboot+vue实现权限管理系统，后端代码" />
     <MESSAGE value="实现岗位管理部分" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现岗位管理部分" />
+    <MESSAGE value="实现部门管理部分" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现部门管理部分" />
   </component>
 </project>

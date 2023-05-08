@@ -34,6 +34,7 @@ public class SysRoleController {
      *
      * @return
      */
+    @Log(title = "角色管理",businessType = BusinessType.SELECT)
     @ApiOperation(value = "获取全部角色列表")
     @GetMapping("/findAll")
     public Result findAll() {
@@ -48,6 +49,7 @@ public class SysRoleController {
      * @return
      */
     //@PreAuthorize("hasAuthority('bnt.sysRole.list')")
+    @Log(title = "角色管理",businessType = BusinessType.SELECT)
     @ApiOperation(value = "获取分页列表")
     @GetMapping("{page}/{limit}")
     public Result index(@ApiParam(name = "page", value = "当前页码", required = true)
@@ -90,6 +92,7 @@ public class SysRoleController {
      * @return
      */
     //@PreAuthorize("hasAuthority('bnt.sysRole.list')")
+    @Log(title = "角色管理",businessType = BusinessType.SELECT)
     @ApiOperation(value = "获取角色")
     @GetMapping("/get/{id}")
     public Result get(@PathVariable Long id) {
@@ -141,7 +144,8 @@ public class SysRoleController {
      * @param idList
      * @return
      */
-    @PreAuthorize("hasAuthority('bnt.sysRole.remove')")
+    @Log(title = "角色管理",businessType = BusinessType.DELETE)
+    //@PreAuthorize("hasAuthority('bnt.sysRole.remove')")
     @ApiOperation(value = "根据id列表删除")
     @DeleteMapping("/batchRemove")
     public Result batchRemove(@RequestBody List<Long> idList) {
@@ -156,6 +160,7 @@ public class SysRoleController {
      *   1）进入分配页面：获取已分配角色与全部角色，进行页面展示
      *   2）保存分配角色：删除之前分配的角色和保存现在分配的角色
      * */
+    @Log(title = "角色管理",businessType = BusinessType.SELECT)
     @ApiOperation(value = "根据用户获取角色数据")
     @GetMapping("/toAssign/{userId}")
     public Result toAssign(@PathVariable Long userId) {
@@ -163,6 +168,12 @@ public class SysRoleController {
         return Result.ok(roleMap);
     }
 
+    /**
+     * 根据用户id分配角色
+     * @param assginRoleVo
+     * @return
+     */
+    @Log(title = "角色管理" ,businessType = BusinessType.ASSGIN)
     @ApiOperation(value = "根据用户分配角色")
     @PostMapping("/doAssign")
     public Result doAssign(@RequestBody AssginRoleVo assginRoleVo) {

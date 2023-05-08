@@ -6,6 +6,8 @@ import com.qi.common.result.Result;
 import com.qi.common.result.ResultCodeEnum;
 import com.qi.model.system.SysLoginLog;
 import com.qi.model.vo.SysLoginLogQueryVo;
+import com.qi.system.annotation.Log;
+import com.qi.system.enums.BusinessType;
 import com.qi.system.service.SysLoginLogService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -30,6 +32,7 @@ public class SysLoginLogController {
     @Autowired
     private SysLoginLogService sysLoginLogService;
 
+    @Log(title = "登录日志管理",businessType = BusinessType.SELECT)
     @ApiOperation(value = "获取分页列表")
     @GetMapping("{page}/{limit}")
     public Result index(
@@ -50,6 +53,7 @@ public class SysLoginLogController {
      * @param id
      * @return
      */
+    @Log(title = "登录日志管理",businessType = BusinessType.SELECT)
     @ApiOperation(value = "获取")
     @GetMapping("get/{id}")
     public Result get(@PathVariable Long id) {

@@ -16,5 +16,7 @@ public interface SysLoginLogService extends IService<SysLoginLog> {
      * @param sysLoginLogQueryVo
      * @return
      */
-    IPage<SysLoginLog> selectPage(Page<SysLoginLog> pageParam, SysLoginLogQueryVo sysLoginLogQueryVo);
+    IPage<SysLoginLog> selectPage(
+            Page<SysLoginLog> pageParam,
+            SysLoginLogQueryVo sysLoginLogQueryVo);
 }
