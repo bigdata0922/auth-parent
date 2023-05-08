@@ -8,6 +8,9 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+/**岗位表
+ * @author admin
+ */
 @Data
 @ApiModel(description = "岗位")
 @TableName("sys_post")

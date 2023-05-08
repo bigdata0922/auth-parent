@@ -25,7 +25,7 @@ public class BaseEntity implements Serializable {
 
     @TableLogic  //逻辑删除 默认效果 0 没有删除 1 已经删除
     @TableField("is_deleted")
-    private Integer isDeleted;
+    private Integer isDeleted;  //命名不规范，应该使用如下格式：deletedFlag,deleted_flag,onlneFlag,online_flag
 
     @TableField(exist = false)
     private Map<String,Object> param = new HashMap<>();

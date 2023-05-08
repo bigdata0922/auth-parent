@@ -22,7 +22,7 @@ public interface SysRoleService extends IService<SysRole> {
      */
     IPage<SysRole> selectPage(Page<SysRole> pageParam, SysRoleQueryVo sysRoleQueryVo);
 
-    /**
+    /**根据id查询
      * 获取用户角色数据
      * @param userId
      * @return
