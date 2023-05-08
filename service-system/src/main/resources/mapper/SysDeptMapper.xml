@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qi.system.mapper.SysDeptMapper">
+    <resultMap id="sysDeptMap" type="com.qi.model.system.SysDept" autoMapping="true">
+    </resultMap>
+
+    <!-- 用于select查询公用抽取的列 -->
+    <sql id="columns">
+        d.id,d.name,d.parent_id,d.tree_path,d.sort_value,d.learder,d.phone,d.status,d.create_time,d.update_time,d.is_deleted
+    </sql>
+    <select id="findListByUserId" resultMap="sysDeptMap">
+        select
+        distinct <include refid="columns" />
+        from sys_dept d
+        inner join sys_user us on us.dept_id=d.id
+        where
+        ur.user_id = #{userId}
+        and m.status = 1
+        and d.is_deleted = 0
+        and us.is_deleted = 0
+    </select>
+
+</mapper>
